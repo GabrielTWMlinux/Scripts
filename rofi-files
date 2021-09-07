@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 #
-# Script name: dmconf
 # Description: Choose from a list of configuration files to edit.
-# Dependencies: dmenu
 # GitLab: https://www.gitlab.com/dwt1/dmscripts
 # Contributors: Derek Taylor
 

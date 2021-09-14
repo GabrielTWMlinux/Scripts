@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MEM=$(free -h | grep Mem | awk '{ print $3 }')
+
+notify-send "RAM: $MEM"

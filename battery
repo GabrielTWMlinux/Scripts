@@ -1,0 +1,40 @@
+#!/bin/bash
+
+CHECK=0
+
+while true; do
+
+	CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
+	STATUS=$(cat /sys/class/power_supply/BAT0/status)
+
+	if [ "$STATUS" = "Discharging" ]
+	then
+		if [ "$CHECK" = 0 ]
+		then
+			BATTERY="Discharging"
+			notify-send -t 1500 "$BATTERY"
+		fi
+		CHECK=1
+		if [ "$CHARGE" -eq 10 ]
+		then
+			BATTERY="B"
+			notify-send -t 2000 "$BATTERY"
+		elif [ "$CHARGE" -eq 10 ]
+		then
+			BATTERY="B"
+			notify-send -t 2000 "$BATTERY"
+		elif [ "$CHARGE" -lt 10 ]
+		then
+			BATTERY="CHARGE ME!"
+			notify-send -t 1500 "$BATTERY"
+		fi
+	fi
+	
+	if [ "$STATUS" = "Charging" ]
+	then
+		CHECK=0
+	fi
+
+	sleep 5s
+done
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+UPDATES=$(checkupdates)
+
+notify-send "$UPDATES"

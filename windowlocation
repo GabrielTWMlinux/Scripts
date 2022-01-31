@@ -1,0 +1,5 @@
+#!/bin/bash
+
+open="$(wmctrl -l | awk '{print $NF, $2+1}')"
+
+workspace="$(echo "${open[@]}" | rofi -dmenu -l 10 -p "Current window list with workspace number.")"

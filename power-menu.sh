@@ -13,7 +13,7 @@
 # single     single_circle     single_full     single_full_circle     single_rounded     single_text
 
 style="power"
-rofi_command="rofi -theme /usr/share/rofi/themes/Arc-Dark2.rasi"
+rofi_command="rofi -theme /usr/share/rofi/themes/dmenu.rasi"
 uptime=$(uptime -p)
 my_hostname=$(hostname)
 

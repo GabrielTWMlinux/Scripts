@@ -33,12 +33,6 @@ case $chosen in
     $reboot)
         sudo shutdown -r now
         ;;
-    $lock)
-        betterlockscreen -l dim
-        ;;
-    $suspend)
-        systemctl suspend
-        ;;
     $logout)
         pkill -KILL -u $USER
         ;;

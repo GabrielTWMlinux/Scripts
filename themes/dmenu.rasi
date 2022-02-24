@@ -3,13 +3,13 @@
  * User: Qball
  * Copyright: Dave Davenport
  */
+
 * {
-    background-color:      Black;
+    background-color:      #0e0e0e;
     border-color:          White;
     text-color:           White;
-    font:            "Times New Roman 12";
+    font:            "Inconsolata 11";
 }
-
 window {
     anchor:     north;
     location:   north;
@@ -17,26 +17,28 @@ window {
     padding:    4px;
     children:   [ horibox ];
 }
-
 horibox {
     orientation: horizontal;
     children:   [ prompt, entry, listview ];
 }
-
 listview {
     layout:     horizontal;
     spacing:    5px;
     lines:      100;
 }
-
 entry {
     expand:     false;
     width:      10em;
 }
-
 element {
     padding: 0px 2px;
 }
 element selected {
-    background-color: SteelBlue;
+    background-color: LightGrey;
+    text-color: Black;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
 }

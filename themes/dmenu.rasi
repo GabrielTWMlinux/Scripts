@@ -5,7 +5,7 @@
  */
 
 * {
-    background-color:      #080808;
+    background-color:      #111111;
     border-color:          White;
     text-color:           White;
     font:            "Inconsolata 11";

@@ -2,4 +2,4 @@
 
 open="$(wmctrl -l | awk '{print $NF, $2+1}')"
 
-workspace="$(echo "${open[@]}" | rofi -dmenu -l 10 -p "Janelas abertas:")"
+workspace="$(echo "${open[@]}" | rofi -dmenu -l 10 -p "Janelas abertas: ")"

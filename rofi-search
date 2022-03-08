@@ -14,16 +14,16 @@ DMBROWSER="firefox"
 # The url format must allow for the search keywords at the end of the url.
 # For example: https://www.amazon.com/s?k=XXXX searches Amazon for 'XXXX'.
 declare -a options=(
-"google - https://www.google.com/search?q="
-"youtube - https://www.youtube.com/results?search_query="
-"twitter - https://twitter.com/search?q="
-"googleimages - https://www.google.com/search?hl=en&tbm=isch&q="
-"duckduckgo - https://duckduckgo.com/?q="
-"github - https://github.com/search?q="
-"gitlab - https://gitlab.com/search?search="
-"letterboxd - https://letterboxd.com/search/"
-"translate - https://translate.google.com/?sl=auto&tl=en&text="
-"wikipedia - https://en.wikipedia.org/wiki/"
+" google - https://www.google.com/search?q="
+" youtube - https://www.youtube.com/results?search_query="
+" twitter - https://twitter.com/search?q="
+" googleimages - https://www.google.com/search?hl=en&tbm=isch&q="
+" duckduckgo - https://duckduckgo.com/?q="
+" github - https://github.com/search?q="
+" gitlab - https://gitlab.com/search?search="
+" letterboxd - https://letterboxd.com/search/"
+" translate - https://translate.google.com/?sl=auto&tl=en&text="
+" wikipedia - https://en.wikipedia.org/wiki/"
 "quit"
 )
 

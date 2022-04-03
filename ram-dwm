@@ -1,5 +1,4 @@
 #!/bin/bash
 
-MEM=$(free -h | grep Mem | awk '{ print $3 }')
-
-echo "${MEM}"
+MEM=$(free -m | awk 'NR==2{printf "%dMB (%.2f%%)\n", $3,$3*100/$2 }')
+echo "$MEM "

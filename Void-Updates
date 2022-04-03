@@ -3,4 +3,4 @@
 
 UPDATES=$(xbps-install -nuM | wc -l ; xbps-install -nuM | awk '{print $1}')
 
-notify-send "$UPDATES"
+echo "$UPDATES "

@@ -9,7 +9,7 @@
 # Defining the text editor to use.
 # DMENUEDITOR="vim"
 # DMENUEDITOR="leafpad"
-DMEDITOR="alacritty -e vim"
+DMEDITOR="alacritty -e nvim"
 
 # An array of options to choose.
 # You can edit this list to add/remove config files.

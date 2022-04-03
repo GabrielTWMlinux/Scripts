@@ -42,11 +42,11 @@ white="$(tput setaf 7)"
 reset="$(tput sgr0)"
 
 # you can change these
-lc="${reset}${bold}${cyan}"	# labels
+lc="${reset}${bold}${blue}"	# labels
 nc="${reset}${bold}${cyan}"	# user and hostname
-ic="${reset}${bold}${bold}"	# info
-c0="${reset}${bold}${cyan}"	# first color
-c1="${reset}${cyan}"			# second color
+ic="${reset}${bold}${ufetch}"	# info
+c0="${reset}${bold}${blue}"	# first color
+c1="${reset}${blue}"		# second color
 
 ## OUTPUT
 

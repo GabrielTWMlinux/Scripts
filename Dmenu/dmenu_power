@@ -25,7 +25,7 @@ logout=" Logout"
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$logout"
 
-chosen="$(echo -e "$options" | dmenu -i -p " Power-Menu: " )"
+chosen="$(echo -e "$options" | dmenu -i -p "Power-Menu " )"
 case $chosen in
     $shutdown)
         sudo shutdown -h now

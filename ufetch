@@ -11,6 +11,8 @@ kernel="$(uname -sr)"
 uptime="$(uptime -p | sed 's/up //')"
 packages="$(xbps-query -l | wc -l)"
 shell="$(basename ${SHELL})"
+memory=$(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2fGiB/%2.2fGiB\n", ( $3 / 1024), ($2 / 1024))}')
+
 
 if [ -z "${WM}" ]; then
 	if [ "${XDG_CURRENT_DESKTOP}" ]; then
@@ -46,7 +48,7 @@ reset="$(tput sgr0)"
 lc="${reset}${bold}${green}"	# labels
 nc="${reset}${bold}${gray}"	# user and hostname
 ic="${reset}${bold}${ufetch}"	# info
-c0="${reset}${bold}${gray}"	# first color
+c0="${reset}${bold}${blue}"	# first color
 c1="${reset}${cyan}"		# second color
 
 ## OUTPUT
@@ -58,6 +60,6 @@ ${c0}   /\   ${c0}___ \`- \   ${nc}  ${ic}${kernel}${reset}
 ${c0}  | |  ${c0}/   \  | |  ${nc}  ${ic}${WM}${reset}
 ${c0}  | |  ${c0}\___/  | |  ${nc}  ${ic}${shell}${reset}
 ${c0}   \ \`-_____  ${c0}\/   ${nc}  ${ic}${packages}${reset}
-${c0}    \`-______\      ${nc}  ${ic}${uptime}${reset}
+${c0}    \`-______\      ${nc}  ${ic}${memory}${reset}
 		  ${nc}─────────────────────${reset}
 EOF

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pkg="$(ls ~/void-packages/srcpkgs | dmenu -i -p "O que voce quer instalar:")"
+pkg="$(ls ~/void-packages/srcpkgs | dmenu -i -p " Src-Packages ")"
 DIR1=$HOME/void-packages/
 DIR2=$HOME/void-packages/srcpkgs
 CHECK="$(xbps-query -s "$pkg" | wc -l)"

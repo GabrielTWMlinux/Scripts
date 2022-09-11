@@ -1,4 +1,8 @@
 #!/bin/bash
-
-CPU=$(top -n 1 -b | awk '/^%Cpu/{print $2}')%
-echo "$CPU "
+  read cpu a b c previdle rest < /proc/stat
+  prevtotal=$((a+b+c+previdle))
+  sleep 2.0
+  read cpu a b c idle rest < /proc/stat
+  total=$((a+b+c+idle))
+  cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
+  printf "%s %s" "$cpu%"

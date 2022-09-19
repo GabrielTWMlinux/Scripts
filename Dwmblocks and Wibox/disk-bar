@@ -2,4 +2,4 @@
 
 DIS=$(df -h /dev/sda1|sed -n '2p'|awk '{print $5}')
 DI2=$(df -h /dev/sdb1|sed -n '2p'|awk '{print $5}')
-echo "$DIS $DI2 "
+echo "$DIS 💽 $DI2 "

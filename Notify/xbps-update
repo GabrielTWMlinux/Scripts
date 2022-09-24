@@ -1,4 +1,0 @@
-#!/bin/bash
-
-UPDATES=$(xbps-install -nuM | wc -l ; xbps-install -nuM | awk '{print $1 }')
-notify-send "Updates: $UPDATES"

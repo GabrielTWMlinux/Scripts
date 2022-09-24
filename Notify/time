@@ -1,3 +1,0 @@
-#!/bin/bash
-
-notify-send -t 2750 "$(date '+%d %B %Y, %A %H:%M')"

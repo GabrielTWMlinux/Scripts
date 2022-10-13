@@ -9,23 +9,20 @@
 # Defining the text editor to use.
 # DMENUEDITOR="vim"
 # DMENUEDITOR="leafpad"
-DMEDITOR="alacritty -e nvim"
+DMEDITOR="st -e nvim"
 
 # An array of options to choose.
 # You can edit this list to add/remove config files.
 declare -a options=(
-"rc.lua - $HOME/.config/awesome/rc.lua"
-"i3 - $HOME/.config/i3/config"
-"herbstluftwm - $HOME/.config/herbstluftwm/autostart"
+"dwm - $HOME/.config/dwm/config.def.h"
+"awesome - $HOME/.config/awesome/rc.lua"
+"qtile - $HOME/.config/qtile/config.py"
 "zsh - $HOME/.zshrc"
-"bash - $HOME/.bashrc"
 "neovim - $HOME/.config/nvim/init.vim"
 "picom - $HOME/.config/picom/picom.conf"
-"alacritty - $HOME/.config/alacritty/alacritty.yml"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "roteiros - /media/gabriel/media/Documentos/TWMLINUX"
 "gtk-css - $HOME/.config/gtk-3.0/gtk.css"
-"files - $HOME/Scripts/searchfiles"
 "quit"
 )
 

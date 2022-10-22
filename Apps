@@ -1,0 +1,3 @@
+sudo xbps-install -S void-repo-multilib void-repo-nonfree void-repo-multilib-nonfree
+
+sudo xbps-install -S zsh zathura-pdf xtools xrandr xprop xclip xcalc unzip transmission-gtk tar steam terminus-font shotcut shotwell scrot ranger rofi qalculate picom pavucontrol pamixer pango obs numlockx noto-fonts-emoji nitrogen neovim neofetch nautilus mpv mlocate lxappearance lm_sensors libxcvt libxcb leafpad go gnome-screenshot font-symbola font-insconsolata-otf flatpak firefox feh expat dunst dejavu-fonts-ttf dbus curl cargo btop awesome alsa-tools alsa-utils alsa-plugins-pulseaudio alacritty 

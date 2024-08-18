@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+#
+# Script name: dmconf
+# Description: Choose from a list of configuration files to edit.
+# Dependencies: dmenu
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# Contributors: Derek Taylor
+
+# Defining the text editor to use.
+# DMENUEDITOR="vim"
+# DMENUEDITOR="leafpad"
+DMEDITOR="st -e nvim"
+
+# An array of options to choose.
+# You can edit this list to add/remove config files.
+declare -a options=(
+"Hyprland - $HOME/.config/hypr/hyprland.conf"
+#"Hyprpaper - $HOME/.config/hypr/hyprpaper.conf"
+"Waybar - $HOME/.config/waybar/config"
+"Waybar CSS - $HOME/.config/waybar/style.css"
+"Fuzzel - $HOME/.config/fuzzel/fuzzel.ini"
+#"swayfx - $HOME/.config/sway/config"
+#"tofi - $HOME/.config/tofi/config"
+#"Tofi - $HOME/.config/wofi/style.css"
+"DWM - $HOME/.config/dwm/config.def.h"
+#"awesome - $HOME/.config/awesome/rc.lua"
+#"qtile - $HOME/.config/qtile/config.py"
+"ZSH - $HOME/.zshrc"
+"Nvim - $HOME/.config/nvim/init.vim"
+#"Picom - $HOME/.config/picom/picom.conf"
+"Dunst - $HOME/.config/dunst/dunstrc"
+"Tofi-Files - $HOME/.config/Scripts/hyprland/tofi-files"
+"Kitty - $HOME/.config/kitty/kitty.conf"
+#"roteiros - /media/gabriel/media/Documentos/TWMLINUX"
+#"gtk-css - $HOME/.config/gtk-3.0/gtk.css"
+)
+
+# Piping the above array into dmenu.
+# We use "printf '%s\n'" to format the array one item to a line.
+#choice=$(printf '%s\n' "${options[@]}" | tofi --width 800 --height 270 --prompt-text " Files   " )
+choice=$(printf '%s\n' "${options[@]}" | fuzzel --dmenu --width 65 --lines 11 -p "Arquivos ")
+
+# What to do when/if we choose 'quit'.
+if [[ "$choice" == "quit" ]]; then
+    echo "Program terminated." && exit 1
+
+# What to do when/if we choose a file to edit.
+elif [ "$choice" ]; then
+	cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+	$DMEDITOR "$cfg"
+
+# What to do if we just escape without choosing anything.
+else
+    echo "Program terminated." && exit 1
+fi

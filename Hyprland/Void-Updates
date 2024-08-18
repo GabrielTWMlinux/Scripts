@@ -1,0 +1,4 @@
+#!/bin/bash
+
+UPDATES=$(xbps-install -nuM | wc -l)
+echo "  $UPDATES    "

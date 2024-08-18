@@ -1,0 +1,5 @@
+#!/bin/bash
+
+date=$(date '+%d %b %Y, %a %H:%M')
+
+hyprctl clients | awk '/title: ./ { gsub("\t*title: *", ""); print}' | tofi --prompt-text " $date  " | xargs -I{} hyprctl dispatch focuswindow "title:{}"

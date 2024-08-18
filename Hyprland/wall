@@ -1,0 +1,8 @@
+#!/bin/sh
+
+while true
+do
+    nbg=$(ls -d HOME/Gabriel/Imagens/wallpapers/* | shuf -n 1)
+    killall hyprpaper
+    hyprpaper
+done

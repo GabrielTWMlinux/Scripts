@@ -1,0 +1,4 @@
+#!/bin/bash
+
+W=$(curl -s https://wttr.in/Rio-de-Janeiro?format="%t\n" | head -n 3)
+echo "  $W   "
